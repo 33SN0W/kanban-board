@@ -23,7 +23,6 @@ export default function App() {
     loadData();
   }, []);
 
-  // Persist view state in localStorage
   useEffect(() => {
     localStorage.setItem("grouping", grouping);
     localStorage.setItem("ordering", ordering);

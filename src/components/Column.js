@@ -69,13 +69,12 @@ export default function Column({ title, tickets, users, grouping }) {
 
   const columnTitle = () => {
     if (grouping === "priority") {
-      const priorityKey = title; // Assuming title is the priority number
+      const priorityKey = title;
       return (
         <div className="priority-column-header">
           {priorityIcons[priorityKey]}
           {/* <span>{priorityTitles[priorityKey]}</span> */}
           <span>{priorityTitles[priorityKey]}</span>
-          {/* Combine title and count */}
         </div>
       );
     }
@@ -103,7 +102,6 @@ export default function Column({ title, tickets, users, grouping }) {
         <h2>
           {columnTitle()}
           <span className="ticket-count"> {tickets.length}</span>{" "}
-          {/* Remove brackets */}
         </h2>
         <div className="column-actions">
           <AddIcon className="add-icon" />
