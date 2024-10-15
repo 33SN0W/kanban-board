@@ -90,8 +90,10 @@ body {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.12);
   padding: 10px;
   margin-bottom: 10px;
-  display: flex; /* Enable flex layout for card */
-  flex-direction: column; /* Arrange children vertically */
+  display: flex; 
+  flex-direction: column; 
+  justify-content: space-between; /* Ensure content is spaced properly */
+  box-sizing: border-box; 
 }
 
 .card-header {
@@ -215,10 +217,10 @@ body {
   color: #44b700;
 }
 
-/* Global font style */
+
 body {
-  font-family: Arial; /* Example font */
-  font-size: 14px; /* Adjust to desired base size */
+  font-family: Arial; 
+  font-size: 14px; 
   line-height: 1.5;
   /* color: #6b778c; */
   margin: 0;
@@ -231,26 +233,30 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0.5em 0;
 }
 
-/* Consistent button/dropdown styling */
-button, select {
+=button, select {
   font-family: inherit;
   font-size: 14px;
 }
 
-/* Additional adjustments */
 .column-header h2 {
   font-size: 16px; 
   color: #4c4c4c;
-  justify-content: space-between; /* Space between the title and actions */
-  align-items: center; /* Align title and count vertically */
+  justify-content: space-between;
+  align-items: center; 
   margin-bottom: 10px;
-  display: flex;/* Ensure column titles are larger than regular text */
+  display: flex;
 }
 
 .card h3 {
   font-size: 13px;
-  
+  display: -webkit-box; 
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden; 
+  text-overflow: ellipsis; 
+  max-width: 100%; 
   margin: 0.5em 0;
+  height: 42px;
 }
 
 .card-title-container {
@@ -259,17 +265,17 @@ button, select {
 
 }
 
-.ticket-title h3 {
-  margin-left: 80000px; /* Space between the status icon and the title */
+/* .ticket-title h3 {
+  margin-left: 80000px; 
   font-size: 30rem;
   margin-top: 0;
   display: flex-start;
-  /* Adjust font size if needed */
-}
+  
+} */
 .status-icon,
 .priority-icon,
 .check-icon {
  
-  flex-shrink: 0; /* Prevent icons from shrinking */
+  flex-shrink: 0;
 }
 
