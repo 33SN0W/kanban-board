@@ -1,25 +1,48 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from "react";
+import Header from "./components/Header";
+import Board from "./components/Board";
+import { fetchData } from "./api";
+import "./styles.css";
 
-function App() {
+export default function App() {
+  const [tickets, setTickets] = useState([]);
+  const [users, setUsers] = useState([]);
+  const [grouping, setGrouping] = useState(
+    () => localStorage.getItem("grouping") || "status"
+  );
+  const [ordering, setOrdering] = useState(
+    () => localStorage.getItem("ordering") || "priority"
+  );
+
+  useEffect(() => {
+    const loadData = async () => {
+      const data = await fetchData();
+      setTickets(data.tickets);
+      setUsers(data.users);
+    };
+    loadData();
+  }, []);
+
+  // Persist view state in localStorage
+  useEffect(() => {
+    localStorage.setItem("grouping", grouping);
+    localStorage.setItem("ordering", ordering);
+  }, [grouping, ordering]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <Header
+        grouping={grouping}
+        ordering={ordering}
+        onGroupingChange={setGrouping}
+        onOrderingChange={setOrdering}
+      />
+      <Board
+        tickets={tickets}
+        users={users}
+        grouping={grouping}
+        ordering={ordering}
+      />
     </div>
   );
 }
-
-export default App;

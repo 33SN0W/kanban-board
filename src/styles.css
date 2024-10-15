@@ -1,0 +1,246 @@
+body {
+  background-color: #f4f4f4;
+  font-family: Arial, sans-serif;
+}
+
+.app {
+  padding: 20px;
+}
+
+.header {
+  background-color: #ffffff;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+}
+
+.display-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.display-button {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 5px 10px;
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+}
+
+.display-icon, .down-icon {
+  margin-right: 5px;
+}
+
+.dropdown-content {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+  padding: 10px;
+  z-index: 1;
+  min-width: 200px;
+}
+
+.dropdown-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.dropdown-item select {
+  width: 100px;
+}
+
+.board {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.column {
+  flex: 1;
+  min-width: 250px;
+  max-width: 300px;
+}
+
+.column-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.column-actions {
+  display: flex;
+  align-items: center;
+}
+
+.add-icon, .three-dot-menu {
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.card {
+  background-color: white;
+  padding: 10px;
+  margin-bottom: 10px;
+  display: flex; /* Enable flex layout for card */
+  flex-direction: column; /* Arrange children vertically */
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2px;
+}
+
+.user-avatar {
+  width: 24px;
+  height: 24px;
+  position: relative;
+}
+
+.avatar-initials {
+  width: 100%;
+  height: 100%;
+  background-color: #e1e1e1;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  color: #333;
+}
+
+.availability-dot {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+
+.available {
+  background-color: yellow;
+}
+
+.unavailable {
+  
+  background-color: white;
+}
+
+
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+}
+
+.card-tags {
+  display: flex;
+  align-items: center;
+}
+
+.status-icon, .priority-icon {
+  width: 16px;
+  height: 16px;
+  margin-right: 5px;
+}
+
+.feature-request {
+  color: #6b778c;
+  border: 1px solid #6b778c;
+  border-radius: 4px;
+  padding: 2px 4px;
+  font-size: 10px;
+  margin-left: 5px;
+  
+    flex-shrink: 0; /* Prevent shrinking */
+  
+}
+
+.user-column-header {
+  display: flex;
+  align-items: center;
+}
+
+.user-column-header .user-avatar {
+  margin-right: 8px;
+}
+
+.ticket-count {
+  font-size: 12px;
+  color: #6b778c;
+  margin-left: 5px;
+}
+
+.check-icon {
+  margin-right: 4px;
+  color: #44b700;
+}
+
+/* Global font style */
+body {
+  font-family: Arial; /* Example font */
+  font-size: 14px; /* Adjust to desired base size */
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  margin: 0.5em 0;
+}
+
+/* Consistent button/dropdown styling */
+button, select {
+  font-family: inherit;
+  font-size: 14px;
+}
+
+/* Additional adjustments */
+.column-header h2 {
+  font-size: 16px; 
+  justify-content: space-between; /* Space between the title and actions */
+  align-items: center; /* Align title and count vertically */
+  margin-bottom: 10px;
+  display: flex;/* Ensure column titles are larger than regular text */
+}
+
+.card h3 {
+  font-size: 15px;
+  margin: 0.5em 0;
+}
+
+.card-title-container {
+  display: flex;
+  align-items: top;
+  /* margin-top: 5px; Center align items vertically */
+
+}
+
+.ticket-title h3 {
+  margin-left: 80000px; /* Space between the status icon and the title */
+  font-size: 1.2em;
+  margin-top: 0;
+  align-items: left;
+  /* Adjust font size if needed */
+}
+.status-icon,
+.priority-icon,
+.check-icon {
+ 
+  flex-shrink: 0; /* Prevent icons from shrinking */
+}
+
