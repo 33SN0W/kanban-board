@@ -1,6 +1,6 @@
 body {
-  background-color: #f4f4f4;
-  font-family: Arial, sans-serif;
+  background-color: #e6ecf0;
+  font-family: Arial;
 }
 
 .app {
@@ -11,8 +11,8 @@ body {
   background-color: #ffffff;
   padding: 10px;
   margin-bottom: 20px;
-  border-radius: 5px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+  border-radius: 8px;
+  /* box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12); */
 }
 
 .display-dropdown {
@@ -37,8 +37,8 @@ body {
   position: absolute;
   top: 100%;
   left: 0;
-  background-color: white;
-  border: 1px solid #e0e0e0;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid #dfdfdf;
   border-radius: 5px;
   padding: 10px;
   z-index: 1;
@@ -86,6 +86,8 @@ body {
 
 .card {
   background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.12);
   padding: 10px;
   margin-bottom: 10px;
   display: flex; /* Enable flex layout for card */
@@ -156,17 +158,39 @@ body {
   margin-right: 5px;
 }
 
+.random-card {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  margin-top: 9px;
+}
+
+.random-card svg{
+  width: 12px;
+  height: 12px;
+}
+
 .feature-request {
+  margin-top: 4px;
   color: #6b778c;
-  border: 1px solid #6b778c;
+  border: 1px solid #b2b3b5;
   border-radius: 4px;
   padding: 2px 4px;
   font-size: 10px;
   margin-left: 5px;
-  
-    flex-shrink: 0; /* Prevent shrinking */
+  align-items: center;
+  display:flex;
   
 }
+.circle-icon{
+  height: 10px;
+  width: 10px;
+  background-color: #9ea1a5;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+
 
 .user-column-header {
   display: flex;
@@ -177,10 +201,13 @@ body {
   margin-right: 8px;
 }
 
+.ticket-id{
+  color: #95979b;
+}
 .ticket-count {
-  font-size: 12px;
+  font-size: 18px;
   color: #6b778c;
-  margin-left: 5px;
+  margin-left: 15px;
 }
 
 .check-icon {
@@ -193,6 +220,7 @@ body {
   font-family: Arial; /* Example font */
   font-size: 14px; /* Adjust to desired base size */
   line-height: 1.5;
+  /* color: #6b778c; */
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -212,6 +240,7 @@ button, select {
 /* Additional adjustments */
 .column-header h2 {
   font-size: 16px; 
+  color: #4c4c4c;
   justify-content: space-between; /* Space between the title and actions */
   align-items: center; /* Align title and count vertically */
   margin-bottom: 10px;
@@ -219,22 +248,22 @@ button, select {
 }
 
 .card h3 {
-  font-size: 15px;
+  font-size: 13px;
+  
   margin: 0.5em 0;
 }
 
 .card-title-container {
   display: flex;
-  align-items: top;
-  /* margin-top: 5px; Center align items vertically */
+  align-items: flex-start;
 
 }
 
 .ticket-title h3 {
   margin-left: 80000px; /* Space between the status icon and the title */
-  font-size: 1.2em;
+  font-size: 30rem;
   margin-top: 0;
-  align-items: left;
+  display: flex-start;
   /* Adjust font size if needed */
 }
 .status-icon,

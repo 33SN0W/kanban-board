@@ -70,14 +70,18 @@ export default function Card({ ticket, user, grouping }) {
         {grouping !== "user" && <UserAvatar user={user} />}
       </div>
       <div className="card-title-container">
-        {grouping !== "status" && getStatusIcon(ticket.status)}{" "}
+        <div className="random-card">
+          {grouping !== "status" && getStatusIcon(ticket.status)}{" "}
+        </div>
         {/* Render Status Icon */}
         <h3 className="ticket-title">{ticket.title}</h3> {/* Title */}
       </div>
       <div className="card-footer">
         <div className="card-tags">
           {grouping !== "priority" && getPriorityIcon(ticket.priority)}
-          <span className="feature-request">Feature Request</span>
+          <span className="feature-request">
+            <div className="circle-icon"></div>Feature Request
+          </span>
         </div>
       </div>
     </div>
